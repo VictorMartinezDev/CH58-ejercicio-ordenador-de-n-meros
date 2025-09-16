@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordenar numeros</title>
-    <style>
-      *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: url(./img/tabla-negra-formulas-calculos-cientificos-inscritos_1150-19413.jpg) no-repeat center center/cover;
-      }
-      #contenedor{
-        border: 2px solid black;
-        border-radius: 10px;
-        text-align: center;
-        background-color: white;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordenar numeros</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url(./img/tabla-negra-formulas-calculos-cientificos-inscritos_1150-19413.jpg) no-repeat center center/cover;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid black;
+      border-radius: 10px;
+      text-align: center;
+      background-color: white;
+      padding: 10px;
+      max-width: 600px;
+
+    }
+
+    div {
+      margin-bottom: 5px;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
-  <dev id="contenedor">
-    <h1>Ordenador de numeros</h1>
-    <p>Ingrese tres numero separados por comas <br>
-        por ejemplo: 1,2,3</p>
+  <dev class="contenedor">
+    <div>
+      <h1>Ordenador de numeros</h1>
+    </div>
+    <div>
+      <p>Ingresa tres numeros separados por comas por ejemplo: 1,2,3</p>
+    </div>
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">#</span>
+      <input type="text" class="form-control" placeholder="Ingrese numero" aria-label="Username"
+        aria-describedby="addon-wrapping" id="obtenerNumero">
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" id="botonOrdenarnumeros">Ordenar numeros</button>
+    </div>
+    <div>
+      <h3>Numeros ingresados</h3>
+      <p id="numerosDesordenados"></p>
+    </div>
+    <div>
+      <h3>Numeros ordenados de menor a mayor</h3>
+      <p id="Numeros ordenados"></p>
+    </div>
+
+
+
   </dev>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="./ordenarNumeros.js"></script>
 </body>
+
 </html>
